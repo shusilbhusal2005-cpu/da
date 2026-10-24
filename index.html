@@ -93,6 +93,16 @@ footer strong{color:#60a5fa}
 .cards{grid-template-columns:1fr}
 section{padding:70px 18px}
 }
+
+.embed-section{padding:76px 20px;background:#fff}
+.embed-shell{max-width:1050px;margin:24px auto 0;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 8px 25px rgba(15,23,42,.06)}
+.embed-frame{display:block;width:100%;border:1px solid var(--line);border-radius:12px;background:#fff}
+.game-frame{height:700px}
+.doc-frame{height:720px}
+.embed-note{color:var(--muted);font-size:.92rem;margin-top:12px}
+.embed-actions{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 16px}
+@media(max-width:600px){.embed-shell{padding:10px}.game-frame{height:650px}.doc-frame{height:620px}}
+
 </style>
 </head>
 <body>
@@ -106,6 +116,8 @@ section{padding:70px 18px}
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
+       <li><a href="#play-game">Play Game</a></li>
+       <li><a href="#project-document">Drive Doc</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -217,14 +229,14 @@ section{padding:70px 18px}
       <div class="project">
         <div class="icon">🎯</div>
         <h3>Shooting Bottles Game</h3>
-        <p>A 60-second browser game where players aim at moving bottles, build hit streaks, and try to reach the target score.</p>
-        <a class="project-link" href="shooting-bottles.html" target="_blank" rel="noopener">Play the Game ↗</a>
+        <p>A spooky 30-second browser game with a moonlit forest, moving bottles, gun aiming, bonus targets, and a 200-point goal.</p>
+        <a class="project-link" href="#play-game">Play Game ↓</a>
       </div>
       <div class="project">
         <div class="icon">📄</div>
         <h3>Game Project Document</h3>
         <p>Read the Google Drive document with the game project details and design.</p>
-        <a class="project-link" href="https://docs.google.com/document/d/1n-cyMkgGMwre4YHS44i9AIQravLM6jgIhMOCFyqojhk/edit?usp=drivesdk" target="_blank" rel="noopener">Open Google Doc ↗</a>
+        <a class="project-link" href="#project-document">Read Google Doc ↓</a>
       </div>
       <div class="project">
         <div class="icon">🌐</div>
@@ -236,6 +248,138 @@ section{padding:70px 18px}
         <h3>Achievements</h3>
         <p>Add certificates, awards, competitions, volunteer work, workshops, and other verified achievements.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="embed-section" id="play-game">
+  <div class="container">
+    <div class="section-head">
+      <h2>Play Shooting Bottles: 30-Second Horror Challenge</h2>
+      <p>Aim and shoot the four colorful bottles in the spooky forest. Reach 200 points before time runs out.</p>
+    </div>
+    <div class="embed-shell">
+      <iframe class="embed-frame game-frame" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;&gt;
+&lt;title&gt;Shooting Bottles: 30-Second Horror Challenge&lt;/title&gt;
+&lt;style&gt;
+:root{color-scheme:dark;--gold:#ffd166;--panel:rgba(9,14,25,.9)}
+*{box-sizing:border-box}
+body{margin:0;background:#070b12;color:#f5f7fb;font-family:system-ui,-apple-system,Segoe UI,sans-serif;display:flex;justify-content:center;min-height:100vh}
+#app{width:min(100%,1050px);padding:12px}
+h1{font-size:clamp(1.25rem,4vw,2rem);margin:4px 0 8px;text-align:center;color:#ffe6a7;text-shadow:0 0 18px #d35c39}
+#hud{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;margin:8px 0}
+.stat{background:#151c2b;border:1px solid #344258;border-radius:10px;padding:7px 12px;font-weight:700}
+#stage{position:relative;border:2px solid #39465b;border-radius:14px;overflow:hidden;background:#07101b;box-shadow:0 0 30px #000;touch-action:none}
+canvas{display:block;width:100%;height:auto;aspect-ratio:16/9;touch-action:none;cursor:crosshair}
+#overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,5,12,.78);padding:16px;text-align:center}
+#overlay.hidden{display:none}
+.panel{max-width:520px;background:rgba(13,19,31,.96);border:1px solid #69778d;border-radius:16px;padding:20px;box-shadow:0 0 30px #000}
+.panel h2{margin:0 0 8px;color:#ffe6a7;font-size:clamp(1.3rem,4vw,2rem)}
+.panel p{line-height:1.5;margin:8px 0 14px}
+button{background:#ffd166;color:#17120a;border:0;border-radius:9px;padding:10px 15px;font-weight:800;font-size:1rem;cursor:pointer;margin:4px}
+button.secondary{background:#29364b;color:#fff;border:1px solid #617089}
+.controls{display:flex;justify-content:center;flex-wrap:wrap;gap:5px;margin-top:10px}
+#note{text-align:center;color:#aeb9c9;font-size:.85rem;margin:8px}
+@media(max-width:520px){#app{padding:7px}.stat{padding:6px 8px;font-size:.9rem}.panel{padding:14px}}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;app&quot;&gt;
+&lt;h1&gt;🌕 Shooting Bottles: 30-Second Horror Challenge&lt;/h1&gt;
+&lt;div id=&quot;hud&quot;&gt;
+ &lt;div class=&quot;stat&quot;&gt;Score: &lt;span id=&quot;score&quot;&gt;0&lt;/span&gt;&lt;/div&gt;
+ &lt;div class=&quot;stat&quot;&gt;Time: &lt;span id=&quot;time&quot;&gt;30&lt;/span&gt;s&lt;/div&gt;
+ &lt;div class=&quot;stat&quot;&gt;Level: &lt;span id=&quot;level&quot;&gt;1 · Beginner&lt;/span&gt;&lt;/div&gt;
+ &lt;div class=&quot;stat&quot;&gt;Streak: &lt;span id=&quot;streak&quot;&gt;0&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;stage&quot;&gt;
+ &lt;canvas id=&quot;game&quot; width=&quot;960&quot; height=&quot;540&quot; aria-label=&quot;Bottle shooting game&quot;&gt;&lt;/canvas&gt;
+ &lt;div id=&quot;overlay&quot;&gt;&lt;div class=&quot;panel&quot;&gt;
+  &lt;h2 id=&quot;overlayTitle&quot;&gt;Shooting Bottles&lt;/h2&gt;
+  &lt;p id=&quot;overlayText&quot;&gt;A spooky forest. Four bottles. Thirty seconds. Hit bottles for points, but don&#x27;t waste shots!&lt;/p&gt;
+  &lt;p&gt;&lt;b&gt;+10&lt;/b&gt; per bottle · &lt;b&gt;+10&lt;/b&gt; every 5 consecutive hits · &lt;b&gt;−5&lt;/b&gt; per miss · glowing bottle gives &lt;b&gt;+10 extra&lt;/b&gt;. Reach 200 points to win.&lt;/p&gt;
+  &lt;div&gt;&lt;button id=&quot;mainBtn&quot;&gt;Start Game&lt;/button&gt;&lt;/div&gt;
+  &lt;div class=&quot;controls&quot;&gt;&lt;button class=&quot;secondary&quot; id=&quot;musicBtn&quot;&gt;Music: Off&lt;/button&gt;&lt;button class=&quot;secondary&quot; id=&quot;sfxBtn&quot;&gt;Sound FX: On&lt;/button&gt;&lt;/div&gt;
+ &lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;controls&quot;&gt;
+ &lt;button id=&quot;pauseBtn&quot; class=&quot;secondary&quot;&gt;Pause&lt;/button&gt;
+ &lt;button id=&quot;restartBtn&quot; class=&quot;secondary&quot;&gt;Restart&lt;/button&gt;
+ &lt;button id=&quot;homeBtn&quot; class=&quot;secondary&quot;&gt;Home&lt;/button&gt;
+ &lt;button id=&quot;musicBtn2&quot; class=&quot;secondary&quot;&gt;Music: Off&lt;/button&gt;
+ &lt;button id=&quot;sfxBtn2&quot; class=&quot;secondary&quot;&gt;Sound FX: On&lt;/button&gt;
+&lt;/div&gt;
+&lt;div id=&quot;note&quot;&gt;Computer: move mouse to aim, click to fire · Mobile: tap the game area to aim and fire · P pauses/resumes, R restarts&lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+(() =&gt; {
+const canvas=document.getElementById(&#x27;game&#x27;),ctx=canvas.getContext(&#x27;2d&#x27;);
+const $=id=&gt;document.getElementById(id);
+const W=960,H=540;
+let mode=&#x27;home&#x27;,score=0,timeLeft=30,streak=0,bestStreak=0,hits=0,misses=0,level=1;
+let bottles=[],effects=[],particles=[],aim={x:W/2,y:200},last=performance.now(),elapsed=0;
+let musicOn=false,sfxOn=true,audioCtx=null,musicTimer=null;
+const colors=[&#x27;#ff4d6d&#x27;,&#x27;#35d9ff&#x27;,&#x27;#ffd166&#x27;,&#x27;#a7ff5a&#x27;,&#x27;#d59cff&#x27;,&#x27;#ff8c42&#x27;];
+function audio(){if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();if(audioCtx.state===&#x27;suspended&#x27;)audioCtx.resume();return audioCtx}
+function tone(freq,dur,type=&#x27;sine&#x27;,vol=.06){if(!sfxOn)return;try{let a=audio(),o=a.createOscillator(),g=a.createGain();o.type=type;o.frequency.value=freq;g.gain.setValueAtTime(vol,a.currentTime);g.gain.exponentialRampToValueAtTime(.001,a.currentTime+dur);o.connect(g);g.connect(a.destination);o.start();o.stop(a.currentTime+dur)}catch(e){}}
+function toggleMusic(){musicOn=!musicOn;if(musicOn){audio();musicTimer=setInterval(()=&gt;{if(musicOn&amp;&amp;mode===&#x27;playing&#x27;){tone(90,.8,&#x27;sine&#x27;,.018);setTimeout(()=&gt;tone(135,.6,&#x27;triangle&#x27;,.012),300)}},1100)}else{clearInterval(musicTimer);musicTimer=null}updateAudioButtons()}
+function updateAudioButtons(){[&#x27;musicBtn&#x27;,&#x27;musicBtn2&#x27;].forEach(id=&gt;$(id).textContent=&#x27;Music: &#x27;+(musicOn?&#x27;On&#x27;:&#x27;Off&#x27;));[&#x27;sfxBtn&#x27;,&#x27;sfxBtn2&#x27;].forEach(id=&gt;$(id).textContent=&#x27;Sound FX: &#x27;+(sfxOn?&#x27;On&#x27;:&#x27;Off&#x27;))}
+function makeBottle(i){let x=90+Math.random()*780,y=130+Math.random()*270;for(let tries=0;tries&lt;20&amp;&amp;bottles.some(b=&gt;Math.hypot(b.x-x,b.y-y)&lt;80);tries++){x=90+Math.random()*780;y=130+Math.random()*270}return {x,y,r:24,color:colors[Math.floor(Math.random()*colors.length)],vx:(Math.random()&lt;.5?-1:1)*(18+level*22+Math.random()*level*16),moving:Math.random()&lt;(.35+level*.2),phase:Math.random()*6.28,bonus:Math.random()&lt;.22,alive:true}}
+function initRound(){score=0;timeLeft=30;streak=0;bestStreak=0;hits=0;misses=0;level=1;elapsed=0;effects=[];particles=[];bottles=Array.from({length:4},(_,i)=&gt;makeBottle(i));mode=&#x27;playing&#x27;;$(&#x27;overlay&#x27;).classList.add(&#x27;hidden&#x27;);updateHud();last=performance.now();audio();if(musicOn&amp;&amp;!musicTimer)toggleMusic()}
+function updateHud(){$(&#x27;score&#x27;).textContent=score;$(&#x27;time&#x27;).textContent=Math.ceil(timeLeft);$(&#x27;streak&#x27;).textContent=streak;level=score&gt;=100?3:score&gt;=50?2:1;$(&#x27;level&#x27;).textContent=level+&#x27; · &#x27;+([&#x27;&#x27;,&#x27;Beginner&#x27;,&#x27;Intermediate&#x27;,&#x27;Advanced&#x27;][level])}
+function showOverlay(title,text,button,fn){$(&#x27;overlayTitle&#x27;).textContent=title;$(&#x27;overlayText&#x27;).textContent=text;$(&#x27;mainBtn&#x27;).textContent=button;$(&#x27;overlay&#x27;).classList.remove(&#x27;hidden&#x27;);mainAction=fn}
+let mainAction=initRound;
+$(&#x27;mainBtn&#x27;).onclick=()=&gt;mainAction();
+$(&#x27;pauseBtn&#x27;).onclick=()=&gt;{if(mode===&#x27;playing&#x27;){mode=&#x27;paused&#x27;;showOverlay(&#x27;Paused&#x27;,&#x27;The timer, bottles, gun effects, and scoring are frozen.&#x27;,&#x27;Resume&#x27;,()=&gt;{mode=&#x27;playing&#x27;;$(&#x27;overlay&#x27;).classList.add(&#x27;hidden&#x27;);last=performance.now()})}else if(mode===&#x27;paused&#x27;){mode=&#x27;playing&#x27;;$(&#x27;overlay&#x27;).classList.add(&#x27;hidden&#x27;);last=performance.now()}};
+$(&#x27;restartBtn&#x27;).onclick=()=&gt;initRound();
+$(&#x27;homeBtn&#x27;).onclick=()=&gt;{mode=&#x27;home&#x27;;showOverlay(&#x27;Shooting Bottles&#x27;,&#x27;A spooky forest. Four bottles. Thirty seconds. Reach 200 points to win.&#x27;,&#x27;Start Game&#x27;,initRound)};
+[&#x27;musicBtn&#x27;,&#x27;musicBtn2&#x27;].forEach(id=&gt;$(id).onclick=toggleMusic);
+[&#x27;sfxBtn&#x27;,&#x27;sfxBtn2&#x27;].forEach(id=&gt;$(id).onclick=()=&gt;{sfxOn=!sfxOn;updateAudioButtons()});
+window.addEventListener(&#x27;keydown&#x27;,e=&gt;{if(e.key.toLowerCase()===&#x27;p&#x27;){if(mode===&#x27;playing&#x27;)$(&#x27;pauseBtn&#x27;).click();else if(mode===&#x27;paused&#x27;)$(&#x27;pauseBtn&#x27;).click()}if(e.key.toLowerCase()===&#x27;r&#x27;&amp;&amp;mode===&#x27;playing&#x27;)initRound()});
+function pointerPos(e){let r=canvas.getBoundingClientRect();return {x:(e.clientX-r.left)/r.width*W,y:(e.clientY-r.top)/r.height*H}}
+canvas.addEventListener(&#x27;pointermove&#x27;,e=&gt;{aim=pointerPos(e)});
+canvas.addEventListener(&#x27;pointerdown&#x27;,e=&gt;{e.preventDefault();if(mode!==&#x27;playing&#x27;)return;aim=pointerPos(e);shoot(aim.x,aim.y)});
+function shoot(tx,ty){if(mode!==&#x27;playing&#x27;)return;const gx=W/2,gy=H-40,ang=Math.atan2(ty-gy,tx-gx);effects.push({type:&#x27;shot&#x27;,x:gx+Math.cos(ang)*40,y:gy+Math.sin(ang)*40,life:.16,angle:ang});tone(95,.12,&#x27;sawtooth&#x27;,.08);
+let target=null,best=Infinity;
+for(const b of bottles){let dx=b.x-gx,dy=b.y-gy,along=dx*Math.cos(ang)+dy*Math.sin(ang);if(along&lt;0)continue;let perp=Math.abs(dx*Math.sin(ang)-dy*Math.cos(ang));if(perp&lt;b.r+7&amp;&amp;along&lt;best){best=along;target=b}}
+if(target){hits++;streak++;bestStreak=Math.max(bestStreak,streak);score+=10;if(streak%5===0)score+=10;if(target.bonus)score+=10;for(let i=0;i&lt;13;i++)particles.push({x:target.x,y:target.y,vx:(Math.random()-.5)*220,vy:(Math.random()-.7)*220,life:.5+Math.random()*.35,color:target.color});tone(520,.16,&#x27;triangle&#x27;,.08);tone(760,.22,&#x27;sine&#x27;,.05);bottles[bottles.indexOf(target)]=makeBottle();}else{misses++;streak=0;score=Math.max(0,score-5)}updateHud()}
+function drawBackground(t){let g=ctx.createLinearGradient(0,0,0,H);g.addColorStop(0,&#x27;#081526&#x27;);g.addColorStop(.58,&#x27;#172337&#x27;);g.addColorStop(1,&#x27;#10100f&#x27;);ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+ctx.fillStyle=&#x27;#e8e5c5&#x27;;ctx.beginPath();ctx.arc(760,90,43,0,Math.PI*2);ctx.fill();ctx.fillStyle=&#x27;#081526&#x27;;ctx.beginPath();ctx.arc(778,77,39,0,Math.PI*2);ctx.fill();
+for(let i=0;i&lt;18;i++){let x=i*62-20;let h=130+(i*47%130);ctx.fillStyle=i%2?&#x27;#080f19&#x27;:&#x27;#0b121d&#x27;;ctx.beginPath();ctx.moveTo(x-35,H-h);ctx.lineTo(x,H-h-85);ctx.lineTo(x+36,H-h);ctx.lineTo(x+14,H-h+10);ctx.lineTo(x+17,H);ctx.lineTo(x-17,H);ctx.lineTo(x-14,H-h+10);ctx.fill()}
+for(let i=0;i&lt;5;i++){let x=((t*10+i*230)%(W+300))-150;ctx.fillStyle=&#x27;rgba(174,195,211,.055)&#x27;;ctx.beginPath();ctx.ellipse(x,350+i*28,190,15,0,0,Math.PI*2);ctx.fill()}
+ctx.fillStyle=&#x27;#171d25&#x27;;ctx.fillRect(0,H-68,W,68);ctx.strokeStyle=&#x27;#4d535a&#x27;;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(0,H-68);ctx.lineTo(W,H-68);ctx.stroke();
+}
+function drawBottle(b,t){let bob=b.moving?Math.sin(t*2+b.phase)*7:0,x=b.x,y=b.y+bob;ctx.save();ctx.translate(x,y);if(b.bonus){ctx.shadowColor=&#x27;#ffe66d&#x27;;ctx.shadowBlur=22;ctx.strokeStyle=&#x27;#fff2a8&#x27;;ctx.lineWidth=3;ctx.beginPath();ctx.arc(0,0,33+Math.sin(t*5)*2,0,Math.PI*2);ctx.stroke()}ctx.fillStyle=b.color;ctx.strokeStyle=&#x27;rgba(255,255,255,.8)&#x27;;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(-15,25);ctx.lineTo(-18,9);ctx.lineTo(-13,-4);ctx.lineTo(-9,-10);ctx.lineTo(-8,-25);ctx.lineTo(8,-25);ctx.lineTo(9,-10);ctx.lineTo(14,-3);ctx.lineTo(18,9);ctx.lineTo(15,25);ctx.closePath();ctx.fill();ctx.stroke();ctx.fillStyle=&#x27;rgba(255,255,255,.65)&#x27;;ctx.fillRect(-7,-20,4,36);ctx.restore()}
+function drawGun(){let gx=W/2,gy=H-37,ang=Math.atan2(aim.y-gy,aim.x-gx);ctx.save();ctx.translate(gx,gy);ctx.rotate(ang);ctx.fillStyle=&#x27;#687486&#x27;;ctx.strokeStyle=&#x27;#d7e0ec&#x27;;ctx.lineWidth=2;ctx.fillRect(-8,-11,48,22);ctx.fillStyle=&#x27;#313b4a&#x27;;ctx.fillRect(4,8,16,25);ctx.fillStyle=&#x27;#aab7c8&#x27;;ctx.fillRect(31,-7,20,14);ctx.restore();ctx.fillStyle=&#x27;#d7e0ec&#x27;;ctx.beginPath();ctx.arc(gx,gy,7,0,Math.PI*2);ctx.fill()}
+function render(t){drawBackground(t);bottles.forEach(b=&gt;drawBottle(b,t));drawGun();effects.forEach(e=&gt;{if(e.type===&#x27;shot&#x27;){ctx.save();ctx.translate(e.x,e.y);ctx.rotate(e.angle);ctx.globalAlpha=Math.max(0,e.life/.16);ctx.fillStyle=&#x27;#ffe6a0&#x27;;ctx.beginPath();ctx.moveTo(0,-5);ctx.lineTo(28,0);ctx.lineTo(0,5);ctx.fill();ctx.restore()}});particles.forEach(p=&gt;{ctx.globalAlpha=Math.max(0,p.life);ctx.fillStyle=p.color;ctx.fillRect(p.x,p.y,5,5)});ctx.globalAlpha=1}
+function frame(now){let dt=Math.min((now-last)/1000,.04);last=now;if(mode===&#x27;playing&#x27;){timeLeft-=dt;elapsed+=dt;for(const b of bottles){if(b.moving){b.x+=b.vx*dt;if(b.x&lt;40+b.r){b.x=40+b.r;b.vx=Math.abs(b.vx)}if(b.x&gt;W-40-b.r){b.x=W-40-b.r;b.vx=-Math.abs(b.vx)}}b.y+=Math.sin(elapsed*1.4+b.phase)*dt*2.2}effects.forEach(e=&gt;e.life-=dt);effects=effects.filter(e=&gt;e.life&gt;0);particles.forEach(p=&gt;{p.x+=p.vx*dt;p.y+=p.vy*dt;p.life-=dt;p.vy+=160*dt});particles=particles.filter(p=&gt;p.life&gt;0);if(timeLeft&lt;=0){timeLeft=0;mode=&#x27;result&#x27;;updateHud();showOverlay(score&gt;=200?&#x27;🎉 You Win!&#x27;:&#x27;Game Over&#x27;,`Final score: ${score} · Bottles hit: ${hits} · Missed shots: ${misses} · Best streak: ${bestStreak}. ${score&gt;=200?&#x27;You reached 200 points!&#x27;:&#x27;Try again to reach 200 points.&#x27;}`,&#x27;Restart&#x27;,initRound)}updateHud()}render(elapsed);requestAnimationFrame(frame)}
+requestAnimationFrame(frame);updateAudioButtons();
+})();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;" title="Shooting Bottles playable game" loading="lazy" allow="fullscreen"></iframe>
+      <p class="embed-note">The latest 30-second horror version is embedded in this portfolio file. No separate game file is required.</p>
+    </div>
+  </div>
+</section>
+
+<section class="embed-section" id="project-document">
+  <div class="container">
+    <div class="section-head">
+      <h2>Read My Google Drive Document</h2>
+      <p>Read the game project document below or open the original Google Doc in a new tab.</p>
+    </div>
+    <div class="embed-shell">
+      <div class="embed-actions">
+        <a class="project-link" href="https://docs.google.com/document/d/1n-cyMkgGMwre4YHS44i9AIQravLM6jgIhMOCFyqojhk/edit?usp=drivesdk" target="_blank" rel="noopener">Open Original Google Doc ↗</a>
+      </div>
+      <iframe class="embed-frame doc-frame" src="https://docs.google.com/document/d/1n-cyMkgGMwre4YHS44i9AIQravLM6jgIhMOCFyqojhk/preview" title="Google Drive project document" loading="lazy"></iframe>
+      <p class="embed-note">To let other people read it, set Google Drive sharing to <strong>Anyone with the link — Viewer</strong>. If Google blocks the preview, use the button above.</p>
     </div>
   </div>
 </section>
